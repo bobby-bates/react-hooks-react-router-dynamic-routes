@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import NavBar from "./NavBar";
 import MoviesPage from "./MoviesPage";
@@ -14,11 +14,11 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/movies">
-          <MoviesPage movies={movies} />
-        </Route>
         <Route exact path="/">
           <div>Home</div>
+        </Route>
+        <Route path="/movies">
+          <MoviesPage movies={movies} />
         </Route>
       </Switch>
     </div>
